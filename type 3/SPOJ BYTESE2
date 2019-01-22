@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+using namespace std ;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {vector<long long>v;
+            vector<long long>v1;
+        int n,i,j,l=0;
+        cin>>n;
+        for(i=0;i<n;i++)
+        {
+
+            long long x,y;
+            cin>>x>>y;
+            v.push_back(x);
+            v1.push_back(y);
+            }
+            sort(v.begin(),v.end());
+            sort(v1.begin(),v1.end());
+            i=0; j=0;
+           int mx=0;
+            while(1)
+            {
+               // cout<<v[i]<<" "<<v1[j]<<endl;
+                if(v1[j]>v[i])
+                    {
+                        i++;
+                        l++;
+                        }
+                        else if(v1[j]==v[i])
+                        {
+                            i++;
+                            j++;
+                        }
+                        else if(v[j]<v[i])
+                        {
+                            j++;
+                            l--;
+                        }
+                        if(mx<l)
+                                mx=l;
+                        if(i==n)
+                            break;
+
+
+
+            }
+            cout<<mx<<endl;
+
+
+
+
+    }
+
+    }
