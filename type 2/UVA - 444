@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int i,j,l,x=0,y,k;
+
+    string s;
+
+    while(getline(cin,s))
+    {
+
+
+     if(isdigit(s[0])==1)
+     {
+         reverse(s.begin(),s.end());
+         int len=s.size();
+
+         for(i=0;i<len;i=i+2){
+            x+=s[i]-'0';
+            x=x*10+s[i+1]-'0';
+
+            if(x>=32)
+            {
+
+
+
+                cout<<char(x);
+                x=0;
+            }
+            else
+            {
+                x=x*10+s[i+2]-'0';
+                
+                cout<<char(x);
+
+                x=0;
+                i++;
+            }
+            }
+            cout<<endl;
+
+     }
+     else
+     {
+         int len=s.size();
+reverse(s.begin(),s.end());
+        for(i=0;i<len;i++)
+            {
+                y=int(s[i]);
+            while(y!=0)
+            {
+                printf("%d",y%10);
+                y=y/10;
+            }
+
+
+
+
+
+
+
+
+
+
+
+     }
+     cout<<endl;
+
+    }
+
+    }
+}
