@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int i,j,k,l,m=1,h=-1;
+
+    string a,b;
+   while( cin>>k ,getchar(), getline(cin,a)){
+    l=a.size();
+
+    vector<string>v;
+
+
+
+for(i=0;i<l;i++)
+{
+    string str=a.substr(i,k);
+    v.push_back(str);
+
+}
+sort(v.begin(),v.end());
+//for(i=0;i<v.size();i++)
+   // cout<<v[i]<<" ";
+   h=-1;
+for(i=0;i<v.size();i++)
+{
+    if(v[i]==v[i+1])
+    m++;
+    if(v[i]!=v[i+1])
+    {
+        if(m>h)
+        {
+            h=m;
+            b=v[i];
+        }
+        m=1;
+    }
+
+}
+for(i=0;i<b.size();i++)
+    cout<<b[i];
+
+cout<<endl;
+v.clear();
+b.clear();
+   }
+
+
+}
