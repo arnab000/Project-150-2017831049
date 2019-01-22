@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x,y,i,j,n,k,l,sura=1;
+    while(1){
+
+    cin>>n>>x;
+    if(n==0 && x==0)
+        break;
+
+
+vector<int>v;
+    for(i=0;i<n+x;i++)
+    {
+        cin>>y;
+        v.push_back(y);
+    }
+    sort(v.begin(),v.end()-x);
+      cout<<"CASE#"<<" "<<sura<<":"<<endl;
+   for(j=n;j<n+x;j++)
+   {
+       l=0;
+       for(k=0;k<n;k++)
+       {
+           if(v[j]==v[k])
+        {l++;
+        break;}
+         }
+        if(l>0)
+            cout<<v[j]<<" found at"<<" "<<k+1<<endl;
+        else
+            cout<<v[j]<<" not found"<<endl;
+   }
+   sura++;
+}
+}
