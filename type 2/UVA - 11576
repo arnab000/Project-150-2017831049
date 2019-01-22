@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+    
+ int x,i,j,l,t,k,m,n;
+    cin>>x;
+
+    for(k=0;k<x;k++)
+    {
+        cin>>m>>n;
+        getchar();
+        string s;
+
+        string s1;
+        for(int y=0;y<n;y++){
+        getline(cin,s);
+         if(y==0)
+         s1+=s;
+         else
+         {
+
+           string u,v;
+           int sura=0;
+            for(j=s.size();j>0;j--)
+            {
+                u=s1.substr(s1.size()-s.size()+sura,j);
+                //cout<<u<<endl;
+                v=s.substr(0,j);
+                //cout<<v<<endl;
+                if(u.compare(v)==0)
+                   {
+                      s.erase(s.begin(),s.begin()+j);
+                      break;
+                   }
+
+                     sura++;
+
+
+
+            }
+            s1+=s;
+         }
+}
+cout<<s1.size()<<endl;
+
+
+}
+
+}
