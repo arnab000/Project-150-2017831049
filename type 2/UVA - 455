@@ -1,0 +1,68 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+
+
+    int x,i,j,l,t,k;
+    cin>>x;
+    getchar();
+
+
+while(x--)
+{
+    string s,s2,hh,sura,sura2=" ";
+    getline(cin,hh);
+
+    getline(cin,s);
+      int m;
+
+    vector<int>v;
+
+    l=s.size();
+    for(j=1;j<=l;j++)
+    {
+        if(l%j==0)
+        {
+            v.push_back(j);
+        }
+    }
+    for(j=0;j<v.size();j++)
+    {
+
+
+        s2=s.substr(0,v[j]);
+        k=l/v[j];
+
+        for(t=0;t<k;t++)
+        {
+            sura+=s2;
+        }
+
+        if(s.compare(sura)==0)
+        {
+
+            break;
+        }
+        sura.clear();
+
+
+    }
+
+        cout<<v[j]<<endl;
+        if(x) cout<<endl;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+}
