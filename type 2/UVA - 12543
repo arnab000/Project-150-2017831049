@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    char s[200],l[200]=",";
+
+
+
+    int i=0,j,h=-1,k=0;
+    while(cin>>s){
+        i=0;
+            if(strcmp(s,"E-N-D")==0)
+    break;
+           int len= strlen(s);
+    for(j=0;j<=len;j++)
+    {
+        if(isalpha(s[j]) ||s[j]=='-')
+        {
+
+
+            i++;
+            }}
+if(i>h)
+{
+    h=i;
+    strcpy(l,s);
+}
+
+            }
+    int baal=strlen(l);
+for(int k=0;k<baal;k++)
+{
+    if(isalpha(l[k]) ||l[k]=='-')
+        printf("%c",tolower(l[k]));
+}
+cout<<"\n";
+
+
+    }
