@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define PI 3.14159265
+
+int main() {
+   int t;
+   scanf("%d",&t);
+   double v0,k1,k2;
+   while(t--)
+   {
+      scanf("%lf%lf%lf",&v0,&k1,&k2);
+
+      double a = (PI - atan(4*k1/k2))/2;
+      double H = v0*v0*sin(a)*sin(a)/20;
+      double R = v0*v0*sin(2*a) /10;
+      printf("%.3lf %.3lf\n",a,k1*R+k2*H);
+   }
+
+}
