@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+
+int main()
+{
+    int i,j,l;
+    char s[10000],n;
+    char v[]="`1234567890-=qwertyuiop[]asdfghjkl;'\\zxcvbnm,./";
+    gets(s);
+    l=strlen(s);
+    for(i=0; i<l; i++)
+    {
+        n=tolower(s[i]);
+        if(n!='`'&& n!='q'&&n!='a'&&n!='z'
+                &&n!='w'&&n!='s'&&n!='x')
+        {
+            for(j=0; j<=46; j++)
+            {
+                if(n==' ')
+                {
+                    printf(" ");
+                    break;
+                }
+                if(n==v[j])
+                {
+                    printf("%c" ,v[j-2]);
+                    break;
+                }
+            }
+        }
+    }
+   printf("\n");
+
+}
