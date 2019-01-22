@@ -1,0 +1,84 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+
+
+    int x,i,j,l,t,k;
+
+    cin>>x;
+    getchar();
+
+
+for(j=0;j<x;j++)
+{
+
+
+    int m=0,k=1;
+     vector<char>v;
+     string s,sura;
+
+
+getline(cin,s);
+
+
+
+
+    l=s.size();
+    for(i=0;i<l;i++)
+    {
+        if(isalpha(s[i]))
+        sura.push_back(tolower(s[i]));
+
+
+    }
+    sort(sura.begin(),sura.end());
+    int len=sura.size();
+
+
+
+
+    for(i=0;i<len;i++)
+    {
+
+        if(sura[i]==sura[i+1])
+        {
+           k++;
+        }
+
+       else if(sura[i]!=sura[i+1] || sura[i]=='\0')
+        {
+            //cout<<k;
+            if(k>m )
+            {
+
+                v.clear();
+                v.push_back(sura[i]);
+                m=k;
+
+            }
+              else if(k==m )
+            {
+                v.push_back(sura[i]);
+
+            }
+            //m=k;
+            k=1;
+        }
+    }
+
+   for(i=0;i<v.size();i++)
+    cout<<v[i];
+   cout<<endl;
+
+
+
+}
+
+
+
+
+
+
+}
