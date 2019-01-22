@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+    int main()
+    {
+        int x,y,i,j,len,len2;
+        string s,l,xx;
+        cin>>x;
+        getchar();
+        for(i=0;i<x;i++)
+        {
+            getline(cin,s);
+            getline(cin,xx);
+             len=s.size();
+            for(j=0;j<len;j++)
+            {
+                if(s[j]==' ')
+                    continue;
+
+                l.push_back(s[j]);
+            }
+
+   //for(j=0;j<len;j++)
+   // cout<<l[j];
+   //cout<<endl;
+         len2=l.size();
+        if(xx.compare(l)==0 && len==len2)
+        {
+            cout<<"Case"<<" "<<i+1<<":"<<" "<<"Yes"<<endl;
+            l.clear();
+        }
+
+        else  if(xx.compare(l)==0 && len!=len2)
+        {
+            cout<<"Case"<<" "<<i+1<<":"<<" "<<"Output Format Error"<<endl;
+             l.clear();
+
+        }
+           else  if(xx.compare(l)!=0 )
+        {
+            cout<<"Case"<<" "<<i+1<<":"<<" "<<"Wrong Answer"<<endl;
+             l.clear();
+
+        }
+        }
+    }
