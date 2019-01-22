@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int i,j,k,l;
+    string a;
+    string b;
+
+    while(getline(cin,a) && getline(cin,b))
+    {
+
+   i=0;j=0;
+
+sort(a.begin(),a.end());
+sort(b.begin(),b.end());
+while(1){
+    if(i>=a.size() || j>=b.size()) break;
+
+    if(a[i]==b[j])
+    {
+        printf("%c",a[i]);
+        i++;
+        j++;
+    }
+    else
+    {
+       if(a[i]<b[j])
+       i++;
+       else j++;
+
+
+    }
+}
+
+    printf("\n");
+    }
+
+
+}
