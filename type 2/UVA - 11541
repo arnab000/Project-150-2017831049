@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main ()
+{
+    int x,i,j,l,t;
+    char q;
+    cin>>x;
+    getchar();
+    for(j=1;j<=x;j++)
+    {
+        string s;
+        getline(cin,s);
+        l=s.size();
+        cout<<"Case "<<j<<":"<<" ";
+
+        for(i=0;i<l;i++){
+               int y=0;
+            if(s[i]>='A' && s[i]<='Z')
+            q=s[i];
+        else if (s[i]>='0'&& s[i]<='9')
+        {
+            y+=s[i]-'0';
+            i++;
+            while(s[i]>='0'&& s[i]<='9')
+             {
+                 y=y*10+s[i]-'0';
+                 i++;
+             }
+i--;
+        }
+
+        //cout<<y;
+        for(t=0;t<y;t++)
+            cout<<q;
+
+        }
+        cout<<endl;
+    }
+
+
+}
