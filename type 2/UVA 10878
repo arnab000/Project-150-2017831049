@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+
+
+    int x,i=0,j=0,l,t,k;
+
+
+
+ vector<char>v;
+
+while(1)
+{
+
+int p,k=7;
+char a;
+    j++;
+
+     string s,sura;
+
+
+getline(cin,s);
+int len=s.size();
+
+if(j>1){
+     k=7;p=0;
+for(i=0;i<len;i++)
+{
+    if(s[i]=='o')
+    p+=pow(2,k);
+    if(s[i]=='o'||s[i]==' ')
+k--;
+
+
+}
+
+cout<<char(p);
+
+
+}
+
+if(s.compare("___________")==0 && j>1)
+    break;
+
+
+
+}
+
+
+
+
+
+}
